@@ -16,10 +16,12 @@ class Product extends Component {
                 <section className="product_details">
                     <div>{this.props.item.product_name}</div>
                     <div>${this.props.item.product_price}</div>
-                </section>
-                <section className="dash_edit_delete">
-                    <button className="dash_button">Edit</button>
-                    <button className="dash_button">Delete</button>
+                    <section className="dash_edit_delete">
+                        <button className="dash_button" onClick={() => {
+                            this.props.deleteProduct(this.props.item.product_id)
+                        }}>Delete</button>
+                        <button className="dash_button">Edit</button>
+                    </section>
                 </section>
             </div>
         )

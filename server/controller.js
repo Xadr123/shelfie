@@ -30,9 +30,9 @@ module.exports = {
 
     deleteProduct: (req, res) => {
         const dbInstance = req.app.get('db')
-        const { product_id } = req.params
+        const { id } = req.params
 
-        dbInstance.deleteProduct(product_id).then(() => res.sendStatus(200)).catch(err => {
+        dbInstance.delete_product(id).then(() => res.sendStatus(200)).catch(err => {
             res.status(500).send({ errorMessage: 'Its broken, fix it.' })
             console.log(err)
         })
