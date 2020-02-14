@@ -21,6 +21,7 @@ app.get('/api/inventory', controller.getGamesList)
 
 app.post('/api/product', controller.newProduct)
 
+app.delete('/api/product/:id', controller.deleteProduct)
 
 massive(CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance)

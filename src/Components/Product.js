@@ -17,6 +17,10 @@ class Product extends Component {
                     <div>{this.props.item.product_name}</div>
                     <div>${this.props.item.product_price}</div>
                 </section>
+                <section className="dash_edit_delete">
+                    <button className="dash_button">Edit</button>
+                    <button className="dash_button">Delete</button>
+                </section>
             </div>
         )
     }

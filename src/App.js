@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Dashboard inventoryList={this.state.inventory} />
+        <Dashboard inventoryList={this.state.inventory} getList={this.componentDidMount} />
         <Form getList={this.componentDidMount} />
       </div>
     )
