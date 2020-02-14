@@ -43,12 +43,11 @@ class Form extends Component {
         })
     }
 
-    addProduct(product) {
-        Axios.post('/api/product', { product }).then(res => {
-
+    addProduct() {
+        Axios.post('/api/product', { product_name: this.state.name, product_price: this.state.price, product_image: this.state.imgurl }).then(() => {
+            this.props.getList()
+            this.cancelInput()
         })
-        this.props.getList()
-        this.cancelInput()
     }
 
     render() {
